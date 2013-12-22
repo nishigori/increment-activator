@@ -37,22 +37,10 @@ endif
 let s:save_cpo = &cpo
 set cpo&vim
 
-" Register default candidates
-call increment_girl#candidates#no_extend_register('_', [
-  \   ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'],
-  \   ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'],
-  \   ['jan', 'feb', 'mar', 'apr', 'may', 'june', 'july', 'aug', 'sep', 'oct', 'nov', 'dec'],
-  \   ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'],
-  \   ['true', 'false'],
-  \   ['yes', 'no'],
-  \   ['on', 'off'],
-  \ ])
-
 " Key mapping {{{
 nnoremap <silent> <C-a> :<C-u>call increment_girl#increment()<CR>
 nnoremap <silent> <C-x> :<C-u>call increment_girl#decrement()<CR>
 " }}}
-
 
 let g:loaded_increment_girl = 1
 let &cpo = s:save_cpo

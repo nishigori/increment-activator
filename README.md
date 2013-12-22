@@ -18,7 +18,7 @@ She has been enhanced to allow increment the list that you have defined
 NeoBundle 'nishigori/increment-girl'
 ```
 
-If you hope to do other approach, Please read more [Documentation](doc/doc-increment-girl.txt)
+If you hope to do other approach, Please read more [Documentation](doc/vim-increment-girl.txt)
 
 ## Usage
 

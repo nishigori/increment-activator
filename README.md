@@ -49,7 +49,7 @@ The list that you define will be generated in candidates patterns automatically
   - sunday <-> monday <-> wednesday <- ... -> saturday <-> sunday
   - SUNDAY <-> MONDAY <-> WEDNESDAY <- ... -> SATURDAY <-> SUNDAY
   - Sunday <-> Monday <-> Wednesday <- ... -> Saturday <-> Sunday
-*weekday-shorten
+* weekday-shorten
   - sun <-> mon <- ... -> sat <-> sun
   - SUN <-> MON <- ... -> SAT <-> SUN
   - Sun <-> Mon <- ... -> Sat <-> Sun

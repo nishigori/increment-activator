@@ -78,6 +78,7 @@ The priorities candidate for increment, current filetype as the first, `_` key a
 let g:increment_girl#config = {
   \   '_' : [
   \     ['Pythonista', 'PHPer', 'Gopher'],
+  \     ['ぬるぽ', 'ガッ'],
   \   ],
   \   'git-rebase-todo': [
   \     ['pick', 'reword', 'edit', 'squash', 'fixup', 'exec'],

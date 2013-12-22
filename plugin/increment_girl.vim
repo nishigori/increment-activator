@@ -37,6 +37,11 @@ endif
 let s:save_cpo = &cpo
 set cpo&vim
 
+" Global options definition " {{{
+let g:increment_girl#config = get(g:, 'increment_girl#config', {})
+let g:increment_girl#enable_default_candidates = 1
+" }}}
+
 " Key mapping {{{
 nnoremap <silent> <C-a> :<C-u>call increment_girl#increment()<CR>
 nnoremap <silent> <C-x> :<C-u>call increment_girl#decrement()<CR>

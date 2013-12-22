@@ -19,7 +19,16 @@ OVERVIEW					*increment-girl-overview*
 The behavior is like <C-a>, <C-x> (in|de)crement current number
 by the default Vim's key-map.
 
-She has been enhanced to allow increment the list that you have defined
+She has been enhanced to allow increment the list that you have defined.
+
+The list defined by you is auto generate to candidates.
+
+For exam, case of private, protected, puBlic
+generated candidates to
+	* no change
+	* lower (private, protected, public)
+	* UPPER (PRIVATE, PROTECTED, PUBLIC)
+	* Capitalize (Private, Protected, Public)
 
 ==============================================================================
 INSTALLATION					*increment-girl-installation*
@@ -81,6 +90,22 @@ g:increment_girl#config				*g:increment-girl_config*
 		  \ }
 <
 		Defaults to "{}".
+
+g:increment_girl#enable_default_candidates
+				*g:increment_girl#enable_default_candidates*
+		enable / disable candidates that defined by IncrementGirl.vim
+
+		Defined candidates:
+
+		* sun, mon, tue, wed, thu, fri, sat
+		* sunday, monday, tuesday, ... saturday
+		* jan, feb, mar, apr, may, ... dec
+		* january, february, march, ... december
+		* true, false
+		* yes no
+		* on, off
+
+		Defaults to "1".
 
 ------------------------------------------------------------------------------
 KEY MAPPINGS					*increment-girl-key-mappings*

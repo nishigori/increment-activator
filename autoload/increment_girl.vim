@@ -25,23 +25,21 @@
 "=============================================================================
 " vim:set fdm=marker ts=2 sw=2 sts=0:
 
-" Global options definition. " {{{
-let g:increment_girl#config = get(g:, 'increment_girl#config', {})
-" }}}
-
 let s:start_upped = 0
 
 function! increment_girl#initialize() " {{{
-  " Register default candidates
-  call increment_girl#candidates#no_extend_register('_', [
-    \   ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'],
-    \   ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'],
-    \   ['jan', 'feb', 'mar', 'apr', 'may', 'june', 'july', 'aug', 'sep', 'oct', 'nov', 'dec'],
-    \   ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'],
-    \   ['true', 'false'],
-    \   ['yes', 'no'],
-    \   ['on', 'off'],
-    \ ])
+  if g:increment_girl#enable_default_candidates
+    " Register default candidates
+    call increment_girl#candidates#no_extend_register('_', [
+      \   ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'],
+      \   ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'],
+      \   ['jan', 'feb', 'mar', 'apr', 'may', 'june', 'july', 'aug', 'sep', 'oct', 'nov', 'dec'],
+      \   ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'],
+      \   ['true', 'false'],
+      \   ['yes', 'no'],
+      \   ['on', 'off'],
+      \ ])
+  endif
 
   let s:start_upped = 1
 endfunction " }}}

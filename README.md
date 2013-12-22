@@ -22,16 +22,50 @@ If you hope to do other approach, Please read more [Documentation](doc/vim-incre
 
 ## Usage
 
+### Case of candidates for increment
+
+The list that you define will be generated in candidates patterns automatically
+
+* no change
+* lower
+* UPPER
+* Capitalize
+
 ### Default defined list
 
-```
-  yes  <-> no
-  on   <-> off
-  true <-> false
-  weekday (sunday <-> monday <-> wednesday <- .. -> saturday <-> sunday)
-  weekday-shorten (sun <-> mon <-> .. sat <-> sun)
-  month (january <-> february <-> .. <-> december <-> january)
-  month-shorten (jan <-> feb .. dec <-> jan)
+* yes/no
+  - yes <-> no
+  - YES <-> NO
+  - Yes <-> No
+* on/off
+  - on <-> off
+  - ON <-> OFF
+  - On <-> Off
+* true/false
+  - true <-> false
+  - TRUE <-> FALSE
+  - True <-> False
+* weekday
+  - sunday <-> monday <-> wednesday <- ... -> saturday <-> sunday
+  - SUNDAY <-> MONDAY <-> WEDNESDAY <- ... -> SATURDAY <-> SUNDAY
+  - Sunday <-> Monday <-> Wednesday <- ... -> Saturday <-> Sunday
+*weekday-shorten
+  - sun <-> mon <- ... -> sat <-> sun
+  - SUN <-> MON <- ... -> SAT <-> SUN
+  - Sun <-> Mon <- ... -> Sat <-> Sun
+* month
+  - january <-> february <- ... -> december <-> january
+  - JANUARY <-> FEBRUARY <- ... -> DECEMBER <-> JANUARY
+  - January <-> February <- ... -> December <-> January
+* month-shorten
+  - jan <-> feb <- ... -> dec <-> jan
+  - JAN <-> FEB <- ... -> DEC <-> JAN
+  - Jan <-> Feb <- ... -> Dec <-> Jan
+
+If you want to disable default candidates, puts on vimrc
+
+```viml
+let g:increment_girl#enable_default_candidates = 0
 ```
 
 ### Examples on vimrc

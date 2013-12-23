@@ -26,20 +26,20 @@
 " vim:set fdm=marker ts=2 sw=2 sts=0:
 
 let s:operation_identifier_map = {
-  \   'decrement': 0,
-  \   'increment': 1,
+  \   'decrement': [0, "\<C-x>"],
+  \   'increment': [1,"\<C-a>"],
   \ }
 
 function! increment_girl#operator#apply(identifier_key) " {{{
-  let increment_identifier = s:operation_identifier_map[a:identifier_key]
+  let increment_identifiers = s:operation_identifier_map[a:identifier_key]
   let candidates = increment_girl#candidates#get(&filetype)
   let cmd_count = (v:count < 1) ? 1 : v:count
   let i = 0
   while i < cmd_count
     let w = expand('<cword>')
     let exec_command = has_key(candidates, w)
-      \ ? "ciw" . candidates[w][increment_identifier]
-      \ : "\<C-a>"
+      \ ? "ciw" . candidates[w][increment_identifiers[0]]
+      \ : increment_identifiers[1]
     echo exec_command
     silent execute "normal! " . exec_command
     let i = i + 1

@@ -1,12 +1,10 @@
-# IncrementGirl.vim
+# IncrementActivator.vim
 
-The powerful increment activator :older_woman: **Kawaii** :older_woman:
-
-## Description
+The [Vim] powerful increment plugin
 
 The behavior is like `<C-a>`, `<C-x>` increment or decrement number by the default [Vim][]
 
-She has been enhanced to allow increment the list that you have defined
+It has been enhanced to allow increment the list that you have defined
 
 [Vim]: http://vim.org/
 
@@ -15,10 +13,10 @@ She has been enhanced to allow increment the list that you have defined
 ### Using [NeoBundle.vim](https://github.com/Shougo/neobundle.vim)
 
 ```viml
-NeoBundle 'nishigori/increment-girl'
+NeoBundle 'nishigori/increment-activator'
 ```
 
-If you hope to do other approach, Please read more [Documentation](doc/vim-increment-girl.txt)
+If you hope to do other approach, Please read more [Documentation](doc/vim-increment-activator.txt)
 
 ## Usage
 
@@ -65,17 +63,17 @@ The list that you define will be generated in candidates patterns automatically
 If you want to disable default candidates, puts on vimrc
 
 ```viml
-let g:increment_girl#enable_default_candidates = 0
+let g:increment_activator#enable_default_candidates = 0
 ```
 
 ### Examples on vimrc
 
-Type of `g:increment_girl#config` is dict. each key is Vim's filetype.
+Type of `g:increment_activator#config` is dict. each key is Vim's filetype.
 
 The priorities candidate for increment, current filetype as the first, `_` key as the second.
 
 ```viml
-let g:increment_girl#config = {
+let g:increment_activator#config = {
   \   '_' : [
   \     ['Pythonista', 'PHPer', 'Gopher'],
   \     ['ぬるぽ', 'ガッ'],

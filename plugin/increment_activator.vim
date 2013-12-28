@@ -1,6 +1,6 @@
 "=============================================================================
-" PACKAGE: IncrementGirl.vim
-" FILE: autoload/increment_girl.vim
+" PACKAGE: IncrementActivator.vim
+" FILE: plugin/increment_activator.vim
 " AUTHOR: Takuya Nishigori <nishigori.tak@gmail.com>
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
@@ -25,37 +25,28 @@
 "=============================================================================
 " vim:set fdm=marker ts=2 sw=2 sts=0:
 
-let s:start_upped = 0
+" Load Once {{{
+if v:version < 702
+  echoerr 'IncrementActivator.vim does not supported version Vim (' . v:version . ').'
+  finish
+elseif exists('g:loaded_increment_activator')
+  finish
+endif
+" }}}
 
-function! increment_girl#initialize() " {{{
-  if g:increment_girl#enable_default_candidates
-    " Register default candidates
-    call increment_girl#candidates#no_extend_register('_', [
-      \   ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'],
-      \   ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'],
-      \   ['jan', 'feb', 'mar', 'apr', 'may', 'june', 'july', 'aug', 'sep', 'oct', 'nov', 'dec'],
-      \   ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'],
-      \   ['true', 'false'],
-      \   ['yes', 'no'],
-      \   ['on', 'off'],
-      \ ])
-  endif
+let s:save_cpo = &cpo
+set cpo&vim
 
-  let s:start_upped = 1
-endfunction " }}}
+" Global options definition " {{{
+let g:increment_activator#config = get(g:, 'increment_activator#config', {})
+let g:increment_activator#enable_default_candidates = 1
+" }}}
 
-function! increment_girl#increment() " {{{
-  if !s:start_upped
-    call increment_girl#initialize()
-  endif
+" Key mapping {{{
+nnoremap <silent> <C-a> :<C-u>call increment_activator#increment()<CR>
+nnoremap <silent> <C-x> :<C-u>call increment_activator#decrement()<CR>
+" }}}
 
-  call increment_girl#operator#apply('increment')
-endfunction " }}}
-
-function! increment_girl#decrement() " {{{
-  if !s:start_upped
-    call increment_girl#initialize()
-  endif
-
-  call increment_girl#operator#apply('decrement')
-endfunction " }}}
+let g:loaded_increment_activator = 1
+let &cpo = s:save_cpo
+unlet s:save_cpo

@@ -1,6 +1,6 @@
 "=============================================================================
-" PACKAGE: IncrementGirl.vim
-" FILE: plugin/increment_girl.vim
+" PACKAGE: IncrementActivator.vim
+" FILE: autoload/increment_activator/operator.vim
 " AUTHOR: Takuya Nishigori <nishigori.tak@gmail.com>
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
@@ -25,28 +25,23 @@
 "=============================================================================
 " vim:set fdm=marker ts=2 sw=2 sts=0:
 
-" Load Once {{{
-if v:version < 702
-  echoerr 'IncrementGirl.vim does not supported version Vim (' . v:version . ').'
-  finish
-elseif exists('g:loaded_increment_girl')
-  finish
-endif
-" }}}
+let s:operation_identifier_map = {
+  \   'decrement': [0, "\<C-x>"],
+  \   'increment': [1,"\<C-a>"],
+  \ }
 
-let s:save_cpo = &cpo
-set cpo&vim
-
-" Global options definition " {{{
-let g:increment_girl#config = get(g:, 'increment_girl#config', {})
-let g:increment_girl#enable_default_candidates = 1
-" }}}
-
-" Key mapping {{{
-nnoremap <silent> <C-a> :<C-u>call increment_girl#increment()<CR>
-nnoremap <silent> <C-x> :<C-u>call increment_girl#decrement()<CR>
-" }}}
-
-let g:loaded_increment_girl = 1
-let &cpo = s:save_cpo
-unlet s:save_cpo
+function! increment_activator#operator#apply(identifier_key) " {{{
+  let increment_identifiers = s:operation_identifier_map[a:identifier_key]
+  let candidates = increment_activator#candidates#get(&filetype)
+  let cmd_count = (v:count < 1) ? 1 : v:count
+  let i = 0
+  while i < cmd_count
+    let w = expand('<cword>')
+    let exec_command = has_key(candidates, w)
+      \ ? "ciw" . candidates[w][increment_identifiers[0]]
+      \ : increment_identifiers[1]
+    echo exec_command
+    silent execute "normal! " . exec_command
+    let i = i + 1
+  endwhile
+endfunction " }}}

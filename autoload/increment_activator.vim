@@ -1,6 +1,6 @@
 "=============================================================================
-" PACKAGE: IncrementGirl.vim
-" FILE: autoload/increment_girl/operator.vim
+" PACKAGE: IncrementActivator.vim
+" FILE: autoload/increment_activator.vim
 " AUTHOR: Takuya Nishigori <nishigori.tak@gmail.com>
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
@@ -25,23 +25,37 @@
 "=============================================================================
 " vim:set fdm=marker ts=2 sw=2 sts=0:
 
-let s:operation_identifier_map = {
-  \   'decrement': [0, "\<C-x>"],
-  \   'increment': [1,"\<C-a>"],
-  \ }
+let s:start_upped = 0
 
-function! increment_girl#operator#apply(identifier_key) " {{{
-  let increment_identifiers = s:operation_identifier_map[a:identifier_key]
-  let candidates = increment_girl#candidates#get(&filetype)
-  let cmd_count = (v:count < 1) ? 1 : v:count
-  let i = 0
-  while i < cmd_count
-    let w = expand('<cword>')
-    let exec_command = has_key(candidates, w)
-      \ ? "ciw" . candidates[w][increment_identifiers[0]]
-      \ : increment_identifiers[1]
-    echo exec_command
-    silent execute "normal! " . exec_command
-    let i = i + 1
-  endwhile
+function! increment_activator#initialize() " {{{
+  if g:increment_activator#enable_default_candidates
+    " Register default candidates
+    call increment_activator#candidates#no_extend_register('_', [
+      \   ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'],
+      \   ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'],
+      \   ['jan', 'feb', 'mar', 'apr', 'may', 'june', 'july', 'aug', 'sep', 'oct', 'nov', 'dec'],
+      \   ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'],
+      \   ['true', 'false'],
+      \   ['yes', 'no'],
+      \   ['on', 'off'],
+      \ ])
+  endif
+
+  let s:start_upped = 1
+endfunction " }}}
+
+function! increment_activator#increment() " {{{
+  if !s:start_upped
+    call increment_activator#initialize()
+  endif
+
+  call increment_activator#operator#apply('increment')
+endfunction " }}}
+
+function! increment_activator#decrement() " {{{
+  if !s:start_upped
+    call increment_activator#initialize()
+  endif
+
+  call increment_activator#operator#apply('decrement')
 endfunction " }}}

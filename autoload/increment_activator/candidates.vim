@@ -1,6 +1,6 @@
 "=============================================================================
-" PACKAGE: IncrementGirl.vim
-" FILE: autoload/increment_girl/candidates.vim
+" PACKAGE: IncrementActivator.vim
+" FILE: autoload/increment_activator/candidates.vim
 " AUTHOR: Takuya Nishigori <nishigori.tak@gmail.com>
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
@@ -67,18 +67,18 @@ function! s:generate(from_lists) " {{{
   return candidates
 endfunction " }}}
 
-function! increment_girl#candidates#get(filetype) " {{{
+function! increment_activator#candidates#get(filetype) " {{{
   return has_key(s:candidates, a:filetype)
     \ ? s:candidates[a:filetype]
     \ : s:candidates['_']
 endfunction " }}}
 
-function! increment_girl#candidates#register(filetype, candidate_lists) " {{{
+function! increment_activator#candidates#register(filetype, candidate_lists) " {{{
   let s:candidates[a:filetype] =
-    \ extend(increment_girl#candidates#get(a:filetype), s:generate(a:candidate_lists))
+    \ extend(increment_activator#candidates#get(a:filetype), s:generate(a:candidate_lists))
 endfunction " }}}
 
 " It has a no side effect
-function! increment_girl#candidates#no_extend_register(filetype, candidate_lists) " {{{
+function! increment_activator#candidates#no_extend_register(filetype, candidate_lists) " {{{
   let s:candidates[a:filetype] = s:generate(a:candidate_lists)
 endfunction " }}}

@@ -105,7 +105,14 @@ g:increment_activator#enable_default_candidates
 	* yes no
 	* on, off
 
-	Defaults to "1".
+	Defaults to 1.
+
+g:increment_activator_no_default_key_mappings
+			*g:increment_activator_no_default_key_mappings*
+	This plugin will define the following key mapping automatically.
+	If you don't want there key mappings,
+	define |g:increment_activator_no_default_key_mappings|
+	before this plugin loaded.
 
 ------------------------------------------------------------------------------
 KEY MAPPINGS                                *increment-activator-key-mappings*

@@ -42,9 +42,11 @@ let g:increment_activator#config = get(g:, 'increment_activator#config', {})
 let g:increment_activator#enable_default_candidates = 1
 " }}}
 
-" Key mapping {{{
-nnoremap <silent> <C-a> :<C-u>call increment_activator#increment()<CR>
-nnoremap <silent> <C-x> :<C-u>call increment_activator#decrement()<CR>
+" Default Key mapping {{{
+if !exists('g:increment_activator_no_default_key_mappings')
+  nnoremap <silent> <C-a> :<C-u>call increment_activator#increment()<CR>
+  nnoremap <silent> <C-x> :<C-u>call increment_activator#decrement()<CR>
+endif
 " }}}
 
 let g:loaded_increment_activator = 1

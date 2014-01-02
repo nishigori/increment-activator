@@ -28,13 +28,13 @@
 let s:candidates = { '_': {} }
 
 
-function! s:generate_word_types(word)
+function! s:generate_word_types(word) " {{{
   let lower = tolower(a:word)
   let UPPER = toupper(a:word)
   let capitalization = matchstr(UPPER, '.') . matchstr(lower, '^.\zs.*')
 
   return [a:word, lower, UPPER, capitalization]
-endfunction
+endfunction " }}}
 
 function! s:generate(from_lists) " {{{
   let candidates = {}

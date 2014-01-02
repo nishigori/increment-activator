@@ -27,7 +27,7 @@
 
 let s:operation_identifier_map = {
   \   'decrement': [0, "\<C-x>"],
-  \   'increment': [1,"\<C-a>"],
+  \   'increment': [1, "\<C-a>"],
   \ }
 
 function! increment_activator#operator#apply(identifier_key) " {{{

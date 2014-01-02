@@ -40,7 +40,6 @@ function! increment_activator#operator#apply(identifier_key) " {{{
     let exec_command = has_key(candidates, w)
       \ ? "ciw" . candidates[w][increment_identifiers[0]]
       \ : increment_identifiers[1]
-    echo exec_command
     silent execute "normal! " . exec_command
     let i = i + 1
   endwhile

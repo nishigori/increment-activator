@@ -28,7 +28,7 @@
 let s:start_upped = 0
 
 function! increment_activator#initialize() " {{{
-  if g:increment_activator#enable_default_candidates
+  if !g:increment_activator_no_default_candidates
     " Register default candidates
     call increment_activator#candidates#no_extend_register('_', [
       \   ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'],

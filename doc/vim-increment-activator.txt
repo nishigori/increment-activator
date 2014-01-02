@@ -91,11 +91,14 @@ g:increment_activator#config			*g:increment-activator_config*
 <
 	Defaults to "{}".
 
-g:increment_activator#enable_default_candidates
-			*g:increment_activator#enable_default_candidates*
-	enable / disable candidates that defined by IncrementActivator.vim
+g:increment_activator_no_default_candidates
+			*g:increment_activator#no_default_candidates*
+	This plugin will use candicates that defined by plugin for increment.
+	If you don't want there candicates,
+	define g:increment_activator_no_default_candidates to 1.
+	before plugin loaded.
 
-	Defined candidates:
+	Candidates defined by plugin:
 
 	* sun, mon, tue, wed, thu, fri, sat
 	* sunday, monday, tuesday, ... saturday
@@ -104,15 +107,21 @@ g:increment_activator#enable_default_candidates
 	* true, false
 	* yes no
 	* on, off
-
-	Defaults to 1.
+>
+	let g:increment_activator_no_default_candidates = 1
+<
+	Defaults to 0.
 
 g:increment_activator_no_default_key_mappings
 			*g:increment_activator_no_default_key_mappings*
 	This plugin will define the following key mapping automatically.
 	If you don't want there key mappings,
-	define |g:increment_activator_no_default_key_mappings|
+	define |g:increment_activator_no_default_key_mappings| to 1.
 	before this plugin loaded.
+>
+	let g:increment_activator#no_default_key_mappings = 1
+<
+	Defaults to 0.
 
 ------------------------------------------------------------------------------
 KEY MAPPINGS                                *increment-activator-key-mappings*

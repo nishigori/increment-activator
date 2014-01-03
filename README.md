@@ -1,10 +1,12 @@
-# IncrementActivator.vim [![Build Status](https://travis-ci.org/nishigori/increment-activator.png?branch=master)](https://travis-ci.org/nishigori/increment-activator)
+# IncrementActivator.vim [![Build Status](https://travis-ci.org/nishigori/increment-activator.png?branch=master)](https://travis-ci.org/nishigori/increment-activator) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/nishigori/increment-activator/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 The [Vim] powerful increment plugin
 
 The behavior is like `<C-a>`, `<C-x>` increment or decrement number by the default [Vim][]
 
 It has been enhanced to allow increment the list that you have defined
+
+![SnapShot - IncrementActivator.vim](https://dl.dropboxusercontent.com/u/26664139/vim/snapshot_IncrementActivator.gif)
 
 [Vim]: http://vim.org/
 
@@ -22,55 +24,40 @@ If you hope to do other approach, Please read more [Documentation](doc/vim-incre
 
 ### Case of candidates for increment
 
-The list that you define will be generated in candidates patterns automatically
+The list will be generated in candidates patterns automatically
 
-* no change
+* no changes
 * lower
 * UPPER
 * Capitalize
 
-### Default defined list
+### Default list defined by plugin
 
 * yes/no
-  - yes <-> no
-  - YES <-> NO
-  - Yes <-> No
 * on/off
-  - on <-> off
-  - ON <-> OFF
-  - On <-> Off
 * true/false
-  - true <-> false
-  - TRUE <-> FALSE
-  - True <-> False
-* weekday
-  - sunday <-> monday <-> wednesday <- ... -> saturday <-> sunday
-  - SUNDAY <-> MONDAY <-> WEDNESDAY <- ... -> SATURDAY <-> SUNDAY
-  - Sunday <-> Monday <-> Wednesday <- ... -> Saturday <-> Sunday
-* weekday-shorten
-  - sun <-> mon <- ... -> sat <-> sun
-  - SUN <-> MON <- ... -> SAT <-> SUN
-  - Sun <-> Mon <- ... -> Sat <-> Sun
-* month
-  - january <-> february <- ... -> december <-> january
-  - JANUARY <-> FEBRUARY <- ... -> DECEMBER <-> JANUARY
-  - January <-> February <- ... -> December <-> January
-* month-shorten
-  - jan <-> feb <- ... -> dec <-> jan
-  - JAN <-> FEB <- ... -> DEC <-> JAN
-  - Jan <-> Feb <- ... -> Dec <-> Jan
+* weekday (sunday <-> monday <-> wednesday <- ... -> saturday <-> sunday)
+* weekday-shorten (sun <-> mon <- ... -> sat <-> sun)
+* month (january <-> february <- ... -> december <-> january)
+* month-shorten (jan <-> feb <- ... -> dec <-> jan)
 
 If you want to disable default candidates, puts on vimrc
 
 ```viml
-let g:increment_activator#enable_default_candidates = 0
+let g:increment_activator_no_default_candidates = 1
 ```
 
-### Examples on vimrc
+### Customization
+
+You can define original list for increment / decrement :)
 
 Type of `g:increment_activator#config` is dict. each key is Vim's filetype.
 
+`_` is special as apply to all filetypes
+
 The priorities candidate for increment, current filetype as the first, `_` key as the second.
+
+*For exam:*
 
 ```viml
 let g:increment_activator#config = {
@@ -95,6 +82,10 @@ let g:increment_activator#config = {
   \ }
 ```
 
+### More than
+
+Please read more [Documentation](doc/vim-increment-activator.txt)
+
 ## Author
 
 * [Takuya Nishigori](http://github.com/nishigori)
@@ -102,7 +93,3 @@ let g:increment_activator#config = {
 ## LICENSE
 
 Licenced under the [MIT](http://opensource.org/licenses/MIT) License.
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/nishigori/increment-activator/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-

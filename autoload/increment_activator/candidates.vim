@@ -25,15 +25,25 @@
 "=============================================================================
 " vim:set fdm=marker ts=2 sw=2 sts=0:
 
-let s:candidates = { '_': {} }
+let s:candidates = {}
+
+let s:default_candidates_lists = [
+  \   ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'],
+  \   ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'],
+  \   ['jan', 'feb', 'mar', 'apr', 'may', 'june', 'july', 'aug', 'sep', 'oct', 'nov', 'dec'],
+  \   ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'],
+  \   ['true', 'false'],
+  \   ['yes', 'no'],
+  \   ['on', 'off'],
+  \ ]
 
 
 function! s:generate_word_types(word) " {{{
   let lower = tolower(a:word)
   let UPPER = toupper(a:word)
-  let capitalization = matchstr(UPPER, '.') . matchstr(lower, '^.\zs.*')
+  let Capitalization = matchstr(UPPER, '.') . matchstr(lower, '^.\zs.*')
 
-  return [a:word, lower, UPPER, capitalization]
+  return [a:word, lower, UPPER, Capitalization]
 endfunction " }}}
 
 function! s:generate(from_lists) " {{{
@@ -67,18 +77,30 @@ function! s:generate(from_lists) " {{{
   return candidates
 endfunction " }}}
 
-function! increment_activator#candidates#get(filetype) " {{{
-  return has_key(s:candidates, a:filetype)
-    \ ? s:candidates[a:filetype]
-    \ : s:candidates['_']
+function! s:generate_file_alltype() " {{{
+  if !has_key(s:candidates, '_')
+    let l:user_defines_list = has_key(g:increment_activator#config, '_')
+      \ ? copy(g:increment_activator#config['_']) : []
+    let l:plugin_defines_list = !g:increment_activator_no_default_candidates
+      \ ? copy(s:default_candidates_lists) : []
+    let s:candidates['_'] = s:generate(extend(l:plugin_defines_list, l:user_defines_list))
+  endif
+
+  return s:candidates['_']
 endfunction " }}}
 
-function! increment_activator#candidates#register(filetype, candidate_lists) " {{{
-  let s:candidates[a:filetype] =
-    \ extend(increment_activator#candidates#get(a:filetype), s:generate(a:candidate_lists))
+function! increment_activator#candidates#generate(to_filetype) " {{{
+  let file_type = empty(a:to_filetype) ? '_' : a:to_filetype
+  if !has_key(s:candidates, file_type)
+    let l:alltype_list = copy(s:generate_file_alltype())
+    let l:user_defines_list = has_key(g:increment_activator#config, file_type)
+      \ ? g:increment_activator#config[file_type] : []
+    let s:candidates[file_type] = extend(l:alltype_list, s:generate(user_defines_list))
+  endif
+
+  return s:candidates[file_type]
 endfunction " }}}
 
-" It has a no side effect
-function! increment_activator#candidates#no_extend_register(filetype, candidate_lists) " {{{
-  let s:candidates[a:filetype] = s:generate(a:candidate_lists)
+function! increment_activator#candidates#clear() " {{{
+  let s:candidates = {}
 endfunction " }}}

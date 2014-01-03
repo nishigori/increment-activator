@@ -43,7 +43,7 @@ function! increment_activator#operator#get_currently_word() " {{{
   return expand('<cword>')
 endfunction " }}}
 
-function! increment_activator#operator#apply(identifier_key) " {{{
+function! increment_activator#operator#applies(identifier_key) " {{{
   let increment_identifiers = s:operation_identifier_map[a:identifier_key]
   let candidates = increment_activator#candidates#generate(&filetype)
   let cmd_count = (v:count < 1) ? 1 : v:count

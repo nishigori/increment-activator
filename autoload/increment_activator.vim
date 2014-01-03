@@ -26,9 +26,9 @@
 " vim:set fdm=marker ts=2 sw=2 sts=0:
 
 function! increment_activator#increment() " {{{
-  call increment_activator#operator#apply('increment')
+  call increment_activator#operator#applies('increment')
 endfunction " }}}
 
 function! increment_activator#decrement() " {{{
-  call increment_activator#operator#apply('decrement')
+  call increment_activator#operator#applies('decrement')
 endfunction " }}}

@@ -64,6 +64,7 @@ let g:increment_activator#config = {
   \   '_' : [
   \     ['Pythonista', 'PHPer', 'Gopher'],
   \     ['ぬるぽ', 'ガッ'],
+  \     ['info', 'warning', 'notice', 'error'],
   \   ],
   \   'cucumber': [
   \     ['Given', 'And', 'When', 'Then'],

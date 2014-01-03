@@ -73,12 +73,8 @@ g:increment_activator#config			*g:increment-activator_config*
 	  \     ['Pythonista', 'PHPer', 'Gopher'],
 	  \     ['ぬるぽ', 'ガッ'],
 	  \   ],
-	  \   'git-rebase-todo': [
-	  \     ['pick', 'reword', 'edit', 'squash', 'fixup', 'exec'],
-	  \   ],
 	  \   'erlang': [
 	  \     ['module', 'export'],
-	  \     ['author', 'copyright', 'doc', 'end'],
 	  \     [
 	  \       'is_alive', 'is_atom', 'is_binary', 'is_bitstring',
 	  \       'is_boolean', 'is_float', 'is_function',
@@ -86,6 +82,17 @@ g:increment_activator#config			*g:increment-activator_config*
 	  \       'is_pid', 'is_port', 'is_process_alive',
 	  \       'is_record', 'is_reference', 'is_tuple',
 	  \     ],
+	  \   ],
+	  \   'git-rebase-todo': [
+	  \     ['pick', 'reword', 'edit', 'squash', 'fixup', 'exec'],
+	  \   ],
+	  \   'go': [
+	  \     ['true', 'false', 'iota', 'nil'],
+	  \     ['byte', 'complex64', 'complex128'],
+	  \     ['int', 'int8', 'int16', 'int32', 'int64'],
+	  \     ['uint', 'uint8', 'uint16', 'uint32', 'uint64'],
+	  \     ['float32', 'float64'],
+	  \     ['interface', 'struct'],
 	  \   ],
 	  \ }
 <
@@ -163,9 +170,12 @@ the change hash To get the diff between two versions,
 go to -
 https://github.com/nishigori/increment-activator/compare/VERSION...VERSION
 
-0.1:
+0.0.1: First Release
 
-- First Release
+- Feature inherited https://github.com/nishigori/vim-sunday
+- Support candidates of filetype definition
+- define able no use default key mappings
+- define able no use candidates created by plugin
 
 ==============================================================================
 LICENSE                                          *increment-activator-license*

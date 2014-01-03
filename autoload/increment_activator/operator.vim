@@ -30,15 +30,28 @@ let s:operation_identifier_map = {
   \   'increment': [1, "\<C-a>"],
   \ }
 
+function! s:create_changable_word_cmd() " {{{
+  if matchstr(getline('.'), '.', col('.') - 1) == ' '
+    return 'wciw' " Jump to without white-spaces
+  endif
+
+  return 'ciw'
+endfunction " }}}
+
+function! increment_activator#operator#get_currently_word() " {{{
+  " TODO: In future, it has been enhanced to allow many (date, datetime, ..)
+  return expand('<cword>')
+endfunction " }}}
+
 function! increment_activator#operator#apply(identifier_key) " {{{
   let increment_identifiers = s:operation_identifier_map[a:identifier_key]
   let candidates = increment_activator#candidates#generate(&filetype)
   let cmd_count = (v:count < 1) ? 1 : v:count
   let i = 0
   while i < cmd_count
-    let w = expand('<cword>')
+    let w = increment_activator#operator#get_currently_word()
     let exec_command = has_key(candidates, w)
-      \ ? "ciw" . candidates[w][increment_identifiers[0]]
+      \ ? s:create_changable_word_cmd() . candidates[w][increment_identifiers[0]]
       \ : increment_identifiers[1]
     silent execute "normal! " . exec_command
     let i = i + 1

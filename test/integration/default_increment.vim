@@ -8,13 +8,13 @@ describe 'default increment'
 
   it 'can increment weekday of currently word'
     put! = 'monday'
-    call increment_activator#increment()
+    execute "normal \<C-a>"
     Expect getline(1) == 'tuesday'
   end
 
   it 'can decrement weekday of currently word'
     put! = 'sunday'
-    call increment_activator#decrement()
+    execute "normal \<C-x>"
     Expect getline(1) == 'saturday'
   end
 

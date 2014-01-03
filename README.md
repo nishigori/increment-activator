@@ -102,3 +102,7 @@ let g:increment_activator#config = {
 ## LICENSE
 
 Licenced under the [MIT](http://opensource.org/licenses/MIT) License.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/nishigori/increment-activator/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+

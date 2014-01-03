@@ -1,4 +1,4 @@
-# IncrementActivator.vim [![Build Status](https://secure.travis-ci.org/nishigori/increment-activator.png)](http://travis-ci.org/nishigori/increment-activator)
+# IncrementActivator.vim [![Build Status](https://travis-ci.org/nishigori/increment-activator.png?branch=master)](https://travis-ci.org/nishigori/increment-activator)
 
 The [Vim] powerful increment plugin
 

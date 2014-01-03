@@ -9,6 +9,6 @@ task :dump do
 end
 
 task :test do
-  sh 'bundle exec vim-flavor test'
+  sh 'bundle exec vim-flavor test test/{unit,integration}'
 end
 

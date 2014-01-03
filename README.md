@@ -57,7 +57,7 @@ Type of `g:increment_activator#config` is dict. each key is Vim's filetype.
 
 The priorities candidate for increment, current filetype as the first, `_` key as the second.
 
-*For exam:*
+*Example $MYVIMRC:*
 
 ```viml
 let g:increment_activator#config = {
@@ -65,12 +65,11 @@ let g:increment_activator#config = {
   \     ['Pythonista', 'PHPer', 'Gopher'],
   \     ['ぬるぽ', 'ガッ'],
   \   ],
-  \   'git-rebase-todo': [
-  \     ['pick', 'reword', 'edit', 'squash', 'fixup', 'exec'],
+  \   'cucumber': [
+  \     ['Given', 'And', 'When', 'Then'],
   \   ],
   \   'erlang': [
   \     ['module', 'export'],
-  \     ['author', 'copyright', 'doc', 'end'],
   \     [
   \       'is_alive', 'is_atom', 'is_binary', 'is_bitstring',
   \       'is_boolean', 'is_float', 'is_function',
@@ -78,6 +77,17 @@ let g:increment_activator#config = {
   \       'is_pid', 'is_port', 'is_process_alive',
   \       'is_record', 'is_reference', 'is_tuple',
   \     ],
+  \   ],
+  \   'git-rebase-todo': [
+  \     ['pick', 'reword', 'edit', 'squash', 'fixup', 'exec'],
+  \   ],
+  \   'go': [
+  \     ['true', 'false', 'iota', 'nil'],
+  \     ['byte', 'complex64', 'complex128'],
+  \     ['int', 'int8', 'int16', 'int32', 'int64'],
+  \     ['uint', 'uint8', 'uint16', 'uint32', 'uint64'],
+  \     ['float32', 'float64'],
+  \     ['interface', 'struct'],
   \   ],
   \ }
 ```

@@ -170,12 +170,15 @@ the change hash To get the diff between two versions,
 go to -
 https://github.com/nishigori/increment-activator/compare/VERSION...VERSION
 
-0.0.1: First Release
+0.0.2	(unreleased)	*increment-activator-cahngelog-0.0.2*
 
-- Feature inherited https://github.com/nishigori/vim-sunday
-- Support candidates of filetype definition
-- define able no use default key mappings
-- define able no use candidates created by plugin
+0.0.1	Sat Jan 4 06:24:23 2014 +0900	*increment-activator-changelog-0.0.1*
+	- First release.
+	- Feature inherited https://github.com/nishigori/vim-sunday
+	- Support candidates of filetype definition
+	- define able no use default key mappings
+	- define able no use candidates created by plugin
+
 
 ==============================================================================
 LICENSE                                          *increment-activator-license*

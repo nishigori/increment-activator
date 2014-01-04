@@ -1,4 +1,7 @@
-# IncrementActivator.vim [![Build Status](https://travis-ci.org/nishigori/increment-activator.png?branch=master)](https://travis-ci.org/nishigori/increment-activator) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/nishigori/increment-activator/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+# IncrementActivator.vim
+
+[![Build Status](https://travis-ci.org/nishigori/increment-activator.png?branch=master)](https://travis-ci.org/nishigori/increment-activator)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/nishigori/increment-activator/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 The [Vim] powerful increment plugin
 
@@ -93,9 +96,7 @@ let g:increment_activator#config = {
   \ }
 ```
 
-### More than
-
-Please read more [Documentation](doc/vim-increment-activator.txt)
+More than, Please read more [Documentation](doc/vim-increment-activator.txt)
 
 ## Author
 

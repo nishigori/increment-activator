@@ -61,8 +61,12 @@ g:increment_activator#config			*g:increment-activator_config*
 	Type of dictionary.
 	Keys is <filetype> ('_' is filetype of all).
 	Value is lists (nested the list).
-	The priorities that candidate for increment or decrement is
-	current filetype as the first, '_' key as the second.
+
+	The candidates for priority is -
+
+	1. Current filetype (`&filetype`)
+	2. `_` key (`_` is special as apply to all filetypes)
+	3. number by default Vim
 
 	Example:
 >

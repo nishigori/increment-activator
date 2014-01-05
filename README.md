@@ -56,9 +56,11 @@ You can define original list for increment / decrement :)
 
 Type of `g:increment_activator#config` is dict. each key is Vim's filetype.
 
-`_` is special as apply to all filetypes
+The candidates for priority is -
 
-The priorities candidate for increment, current filetype as the first, `_` key as the second.
+1. Current filetype (`&filetype`)
+2. `_` key (`_` is special as apply to all filetypes)
+3. number by default Vim
 
 *Example $MYVIMRC:*
 

@@ -126,11 +126,11 @@ g:increment_activator_no_default_candidates
 g:increment_activator_no_default_key_mappings
 			*g:increment_activator_no_default_key_mappings*
 	This plugin will define the following key mapping automatically.
-	If you don't want there key mappings,
+	If you don't want there key mappings (<C-a>, <C-x>),
 	define |g:increment_activator_no_default_key_mappings| to 1.
 	before this plugin loaded.
 >
-	let g:increment_activator#no_default_key_mappings = 1
+	let g:increment_activator_no_default_key_mappings = 1
 <
 	Defaults to 0.
 

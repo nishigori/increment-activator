@@ -25,6 +25,20 @@ If you hope to do other approach, Please read more [Documentation](doc/vim-incre
 
 ## Usage
 
+### Default key mappings
+
+This plugin will define the following key mapping automatically `<C-a>` & `<C-x>`.
+
+If you don't want there key mappings (), please put on vimrc
+
+```viml
+let g:increment_activator_no_default_key_mappings = 1
+
+" e.g) Original key mappings
+nnoremap ab :<C-u>call increment_activator#increment()<CR>
+nnoremap az :<C-u>call increment_activator#decrement()<CR>
+```
+
 ### Case of candidates for increment
 
 The list will be generated in candidates patterns automatically

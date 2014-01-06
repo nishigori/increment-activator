@@ -148,7 +148,7 @@ increment-activator#decrement()
 ==============================================================================
 ISSUES                                            *increment-activator-issues*
 
-*increment-activator* is under the management of Github.
+This plugin is under the management of Github.
 
 https://github.com/nishigori/increment-activator/issues
 

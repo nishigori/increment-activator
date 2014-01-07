@@ -1,6 +1,7 @@
 # IncrementActivator.vim
 
 [![Build Status](https://travis-ci.org/nishigori/increment-activator.png?branch=master)](https://travis-ci.org/nishigori/increment-activator)
+[![Stories in Ready](http://badge.waffle.io/nishigori/increment-activator.png)](http://waffle.io/nishigori/increment-activator)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/nishigori/increment-activator/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 The [Vim] powerful increment plugin

@@ -152,17 +152,7 @@ This plugin is under the management of Github.
 
 https://github.com/nishigori/increment-activator/issues
 
-Are you having any the problem ? Please add issue XD
-
-Hope to include the following checklist to ensure pull-request description.
->
-	| Q             | A
-	| ------------- | --------
-	| Bug fix?      | [yes|no]
-	| New feature?  | [yes|no]
-	| BC breaks?    | [yes|no]
-	| Deprecations? | [yes|no]
-	| Doc PR        | [The reference to the documentation PR if any]
+Are you having any the problem or question ? Please add issue !!
 >
 ==============================================================================
 CHANGLOG                                       *increment-activator-changelog*

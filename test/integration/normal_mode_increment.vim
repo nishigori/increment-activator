@@ -2,8 +2,7 @@ source plugin/increment_activator.vim
 
 describe 'default increment'
   after
-    " Delete all line
-    execute 'normal 1GdG'
+    execute 'normal 1GdG' | " Delete all line
   end
 
   it 'can increment weekday of currently word'

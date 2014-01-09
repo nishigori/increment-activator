@@ -9,14 +9,14 @@ describe 'Candidates generation'
   it 'generates defined by the default'
     let candidates = increment_activator#candidates#generate('')
 
-    Expect has_key(candidates, 'sunday') == 1
-    Expect has_key(candidates, 'SUNDAY') == 1
-    Expect has_key(candidates, 'Sunday') == 1
+    Expect has_key(candidates, 'sunday') to_be_true
+    Expect has_key(candidates, 'SUNDAY') to_be_true
+    Expect has_key(candidates, 'Sunday') to_be_true
   end
 
   it 'defines no default candidates'
     let g:increment_activator_no_default_candidates = 1
-    Expect has_key(increment_activator#candidates#generate(''), 'sunday') != 1
+    Expect has_key(increment_activator#candidates#generate(''), 'sunday') to_be_false
   end
 
   it 'defines user config'
@@ -25,7 +25,7 @@ describe 'Candidates generation'
       \     ['GoodMorning', 'GoodEvening'],
       \   ],
       \ }
-    Expect has_key(increment_activator#candidates#generate(''), 'GoodMorning') == 1
+    Expect has_key(increment_activator#candidates#generate(''), 'GoodMorning') to_be_true
   end
 
   it 'defines each file type'
@@ -38,8 +38,8 @@ describe 'Candidates generation'
       \     ['describe', 'context'],
       \   ],
       \ }
-    Expect has_key(increment_activator#candidates#generate('vim'), 'autocmd') == 1
+    Expect has_key(increment_activator#candidates#generate('vim'), 'autocmd') to_be_true
     " Not includes to other filetypes
-    Expect has_key(increment_activator#candidates#generate('ruby'), 'autocmd') != 1
+    Expect has_key(increment_activator#candidates#generate('ruby'), 'autocmd') to_be_false
   end
 end

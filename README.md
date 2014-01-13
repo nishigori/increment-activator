@@ -26,18 +26,26 @@ If you hope to do other approach, Please read more [Documentation](doc/vim-incre
 
 ## Usage
 
-### Default key mappings
+### Kay map
 
-This plugin will define the following key mapping automatically `<C-a>` & `<C-x>`.
+On **Normal-mode**, This plugin defines the following key mapping automatically `<C-a>` & `<C-x>`
 
-If you don't want there key mappings (), please put on vimrc
+If you don't want there key mappings, please write on vimrc
 
 ```viml
 let g:increment_activator_no_default_key_mappings = 1
 
 " e.g) Original key mappings
-nnoremap ab :<C-u>call increment_activator#increment()<CR>
-nnoremap az :<C-u>call increment_activator#decrement()<CR>
+nmap ab <Plug>(increment-activator-increment)
+nmap az <Plug>(increment-activator-decrement)
+```
+
+If you want to be enabled to other `mode()`, please define map like this.
+
+```viml
+" Be enabled on insert-mode
+imap <silent> <C-a> <Plug>(increment-activator-increment)
+imap <silent> <C-x> <Plug>(increment-activator-decrement)
 ```
 
 ### Case of candidates for increment
@@ -113,7 +121,7 @@ let g:increment_activator#config = {
   \ }
 ```
 
-More than, Please read more [Documentation](doc/vim-increment-activator.txt)
+More than, Please read [Documentation](doc/vim-increment-activator.txt)
 
 ## Author
 

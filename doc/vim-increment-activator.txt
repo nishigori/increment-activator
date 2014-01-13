@@ -137,14 +137,20 @@ g:increment_activator_no_default_key_mappings
 ------------------------------------------------------------------------------
 KEY MAPPINGS                                *increment-activator-key-mappings*
 
-				*increment_activator#increment()*
-increment-activator#increment()
-		increment current word (like <cword>).
+This plugin will define the following |Normal-mode| key map automatically.
+In other |mode()|, you must define key maps.
 
-				*increment_activator#decrement()*
-increment-activator#decrement()
-		decrement current word (like <cword>).
+Example for custom key mappings:
+>
+	" Normal-mode: customized
+	let g:increment_activator_no_default_key_mappings = 1
+	nmap <silent> ab <Plug>(increment-activator-increment)
+	nmap <silent> az <Plug>(increment-activator-decrement)
 
+	" Insert-mode
+	imap <silent> <C-a> <Plug>(increment-activator-increment)
+	imap <silent> <C-x> <Plug>(increment-activator-decrement)
+<
 ==============================================================================
 ISSUES                                            *increment-activator-issues*
 

@@ -187,14 +187,12 @@ Are you having any the problem, question, or idea ? Please add issue !!
 ==============================================================================
 CHANGLOG                                       *increment-activator-changelog*
 
-To get the diff for a specific change,
-go to -
-https://github.com/nishigori/increment-activator/commit/XXX where XXX is
-the change hash To get the diff between two versions,
-go to -
+To get the diff between two versions, go to -
 https://github.com/nishigori/increment-activator/compare/VERSION...VERSION
 
-0.0.2	(unreleased)	*increment-activator-cahngelog-0.0.2*
+0.0.2	Tue Jan 14 08:02:55 2014 +0900	*increment-activator-cahngelog-0.0.2*
+	- Support insert-mode
+	- Fix E154 'duplicate tag 'increment-activator'
 
 0.0.1	Sat Jan 4 06:24:23 2014 +0900	*increment-activator-changelog-0.0.1*
 	- First release.

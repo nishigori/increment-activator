@@ -55,6 +55,21 @@ Getting Manual:
 INTERFACE                                      *increment-activator-interface*
 
 ------------------------------------------------------------------------------
+FUNCTIONS                                      *increment-activator-functions*
+
+increment_activator#increment()                *increment_activator#increment*
+	Apply to increment currently word.
+
+increment_activator#decrement()                *increment_activator#decrement*
+	Apply to decrement currently word.
+
+					*increment_activator#candidates#clear*
+increment_activator#candidates#generate({filetype})
+
+increment_activator#candidates#clear()  *increment_activator#candidates#clear*
+	Clear to generated candidates of all.
+
+------------------------------------------------------------------------------
 VARIABLES                                      *increment-activator-variables*
 
 g:increment_activator#config			*g:increment-activator_config*
@@ -151,6 +166,15 @@ Example for custom key mappings:
 	imap <silent> <C-a> <Plug>(increment-activator-increment)
 	imap <silent> <C-x> <Plug>(increment-activator-decrement)
 <
+
+<Plug>(increment-activator-increment)  *<Plug>(increment-activator-increment)*
+		Applies to increment currently word.
+		It supports on |Normal-mode|, |Insert-mode|.
+
+<Plug>(increment-activator-decrement)  *<Plug>(increment-activator-decrement)*
+		Applies to decrement currently word.
+		It supports on |Normal-mode|, |Insert-mode|.
+
 ==============================================================================
 ISSUES                                            *increment-activator-issues*
 
@@ -158,7 +182,7 @@ This plugin is under the management of Github.
 
 https://github.com/nishigori/increment-activator/issues
 
-Are you having any the problem or question ? Please add issue !!
+Are you having any the problem, question, or idea ? Please add issue !!
 >
 ==============================================================================
 CHANGLOG                                       *increment-activator-changelog*

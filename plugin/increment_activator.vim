@@ -37,13 +37,20 @@ endif
 let s:save_cpo = &cpo
 set cpo&vim
 
-" Global options definition " {{{
-let g:increment_activator#config = get(g:, 'increment_activator#config', {})
+if exists('g:increment_activator#config')
+  let s:deprecated_msg = 'g:increment_activator#config is deprecated.'
+    \ . ' Please use g:increment_activator_filetype_candidates.'
+  echohl WarningMsg | echomsg s:deprecated_msg | echohl None
+endif
 
+" Global options definition " {{{
 let g:increment_activator_no_default_candidates =
   \ get(g:, 'increment_activator_no_default_candidates', 0)
 let g:increment_activator_no_default_key_mappings =
   \ get(g:, 'increment_activator_no_default_key_mappings', 0)
+
+let g:increment_activator_filetype_candidates =
+  \ get(g:, 'increment_activator_filetype_candidates', {})
 " }}}
 
 " Default Key mapping {{{

@@ -19,8 +19,8 @@ describe 'Candidates generation'
     Expect has_key(increment_activator#candidates#generate(''), 'sunday') to_be_false
   end
 
-  it 'defines user config'
-    let g:increment_activator#config = {
+  it 'defines user candidates'
+    let g:increment_activator_filetype_candidates = {
       \   '_': [
       \     ['GoodMorning', 'GoodEvening'],
       \   ],
@@ -29,7 +29,7 @@ describe 'Candidates generation'
   end
 
   it 'defines each file type'
-    let g:increment_activator#config = {
+    let g:increment_activator_filetype_candidates = {
       \   'vim': [
       \     ['augroup', 'autocmd'],
       \     ['paste', 'nopaste'],

@@ -79,8 +79,8 @@ endfunction " }}}
 
 function! s:generate_file_alltype() " {{{
   if !has_key(s:candidates, '_')
-    let l:user_defines_list = has_key(g:increment_activator#config, '_')
-      \ ? copy(g:increment_activator#config['_']) : []
+    let l:user_defines_list = has_key(g:increment_activator_filetype_candidates, '_')
+      \ ? copy(g:increment_activator_filetype_candidates['_']) : []
     let l:plugin_defines_list = !g:increment_activator_no_default_candidates
       \ ? copy(s:default_candidates_lists) : []
     let s:candidates['_'] = s:generate(extend(l:plugin_defines_list, l:user_defines_list))
@@ -93,8 +93,8 @@ function! increment_activator#candidates#generate(to_filetype) " {{{
   let file_type = empty(a:to_filetype) ? '_' : a:to_filetype
   if !has_key(s:candidates, file_type)
     let l:alltype_list = copy(s:generate_file_alltype())
-    let l:user_defines_list = has_key(g:increment_activator#config, file_type)
-      \ ? g:increment_activator#config[file_type] : []
+    let l:user_defines_list = has_key(g:increment_activator_filetype_candidates, file_type)
+      \ ? g:increment_activator_filetype_candidates[file_type] : []
     let s:candidates[file_type] = extend(l:alltype_list, s:generate(user_defines_list))
   endif
 

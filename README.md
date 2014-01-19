@@ -77,7 +77,7 @@ let g:increment_activator_no_default_candidates = 1
 
 You can define original list for increment / decrement :)
 
-Type of `g:increment_activator#config` is dict. each key is Vim's filetype.
+Type of `g:increment_activator_filetype_candidates` is dict. each key is Vim's filetype.
 
 The candidates for priority is -
 
@@ -88,7 +88,7 @@ The candidates for priority is -
 *Example $MYVIMRC:*
 
 ```viml
-let g:increment_activator#config = {
+let g:increment_activator_filetype_candidates = {
   \   '_' : [
   \     ['Pythonista', 'PHPer', 'Gopher'],
   \     ['ぬるぽ', 'ガッ'],

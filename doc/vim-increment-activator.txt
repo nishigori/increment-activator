@@ -63,7 +63,7 @@ increment_activator#increment()                *increment_activator#increment*
 increment_activator#decrement()                *increment_activator#decrement*
 	Apply to decrement currently word.
 
-					*increment_activator#candidates#clear*
+				     *increment_activator#candidates#generate*
 increment_activator#candidates#generate({filetype})
 
 increment_activator#candidates#clear()  *increment_activator#candidates#clear*

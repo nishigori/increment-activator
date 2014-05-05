@@ -1,3 +1,6 @@
+tags
 doc/tags
 *.lock
 .vim-flavor
+*.un~
+*.sw[op]

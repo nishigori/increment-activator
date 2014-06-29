@@ -195,9 +195,10 @@ CHANGLOG                                       *increment-activator-changelog*
 To get the diff between two versions, go to -
 https://github.com/nishigori/increment-activator/compare/VERSION...VERSION
 
-0.0.3	(Unstable)
+0.1.0
 	- Change variable name from 'increment_activator#config' to -
 	  'increment_activator_filetype_candidates'
+	- [GH-6] Fix increment not expect multiple line
 
 0.0.2	Tue Jan 14 08:02:55 2014 +0900	*increment-activator-cahngelog-0.0.2*
 	- Support insert-mode

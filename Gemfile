@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'vim-flavor', '~> 1.1'
+gem 'vim-flavor', '~> 2.1'
 
 group :development do
   gem 'guard'

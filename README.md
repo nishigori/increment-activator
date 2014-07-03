@@ -1,8 +1,16 @@
 # IncrementActivator.vim
 
+![v:version >= 702](http://img.shields.io/badge/v:version->=%20702-007F00.svg?style=flat)&nbsp;![Script Type: Utility](http://img.shields.io/badge/script%20type-utility-000000.svg?style=flat)
+
+[![Build Status](http://img.shields.io/travis/nishigori/increment-activator/master.svg?style=flat)](https://travis-ci.org/nishigori/increment-activator)
+[![MIT Licensed](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](#license)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/nishigori/increment-activator/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
+<!-- Original
 [![Build Status](https://travis-ci.org/nishigori/increment-activator.png?branch=master)](https://travis-ci.org/nishigori/increment-activator)
 [![Stories in Ready](http://badge.waffle.io/nishigori/increment-activator.png)](http://waffle.io/nishigori/increment-activator)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/nishigori/increment-activator/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+-->
 
 The [Vim] powerful increment plugin
 

@@ -1,5 +1,6 @@
 # IncrementActivator.vim
 
+[![wercker status](https://app.wercker.com/status/372b9b618d1ff314ec20e65ffcf418bd/s "wercker status")](https://app.wercker.com/project/bykey/372b9b618d1ff314ec20e65ffcf418bd)
 [![Build Status](http://img.shields.io/travis/nishigori/increment-activator/master.svg?style=flat)](https://travis-ci.org/nishigori/increment-activator)
 [![MIT Licensed](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](#license)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/nishigori/increment-activator/trend.png)](https://bitdeli.com/free "Bitdeli Badge")

@@ -188,14 +188,14 @@ This plugin is under the management of Github.
 https://github.com/nishigori/increment-activator/issues
 
 Are you having any the problem, question, or idea ? Please add issue !!
->
+
 ==============================================================================
 CHANGLOG                                       *increment-activator-changelog*
 
 To get the diff between two versions, go to -
 https://github.com/nishigori/increment-activator/compare/VERSION...VERSION
 
-0.1.0
+0.1.0	Sun Jun 29 19:59:53 2014 +0900	*increment-activator-cahngelog-0.1.0*
 	- Change variable name from 'increment_activator#config' to -
 	  'increment_activator_filetype_candidates'
 	- [GH-6] Fix increment not expect multiple line
@@ -215,7 +215,7 @@ https://github.com/nishigori/increment-activator/compare/VERSION...VERSION
 ==============================================================================
 LICENSE                                          *increment-activator-license*
 
-  Copyright 2013 by Takuya Nishigori
+  Copyright 2013-2014 by Takuya Nishigori
 
   Permission is hereby granted, free of charge, to any person obtaining
   a copy of this software and associated documentation files (the

@@ -1,17 +1,11 @@
 # IncrementActivator.vim
 
-[![wercker status](https://app.wercker.com/status/372b9b618d1ff314ec20e65ffcf418bd/s "wercker status")](https://app.wercker.com/project/bykey/372b9b618d1ff314ec20e65ffcf418bd)
 [![Build Status](http://img.shields.io/travis/nishigori/increment-activator/master.svg?style=flat)](https://travis-ci.org/nishigori/increment-activator)
 [![MIT Licensed](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](#license)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/nishigori/increment-activator/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
-![v:version >= 702](http://img.shields.io/badge/v:version->=%20702-007F00.svg?style=flat)&nbsp;![Script Type: Utility](http://img.shields.io/badge/script%20type-utility-000000.svg?style=flat)
-
-<!-- Original
-[![Build Status](https://travis-ci.org/nishigori/increment-activator.png?branch=master)](https://travis-ci.org/nishigori/increment-activator)
-[![Stories in Ready](http://badge.waffle.io/nishigori/increment-activator.png)](http://waffle.io/nishigori/increment-activator)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/nishigori/increment-activator/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
--->
+![v:version >= 702](http://img.shields.io/badge/v:version->=%20702-007F00.svg?style=flat)
+![Script Type: Utility](http://img.shields.io/badge/script%20type-utility-000000.svg?style=flat)
 
 The [Vim] powerful increment plugin
 

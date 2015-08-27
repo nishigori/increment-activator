@@ -13,7 +13,7 @@ The behavior is like `<C-a>`, `<C-x>` increment or decrement number by the defau
 
 It has been enhanced to allow increment the list that you have defined
 
-![SnapShot - IncrementActivator.vim](https://dl.dropboxusercontent.com/u/26664139/vim/snapshot_IncrementActivator.gif)
+![SnapShot - IncrementActivator.vim](snapshot.gif)
 
 [Vim]: http://vim.org/
 

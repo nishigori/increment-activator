@@ -19,10 +19,10 @@ It has been enhanced to allow increment the list that you have defined
 
 ## Installation
 
-### Using [NeoBundle.vim](https://github.com/Shougo/neobundle.vim)
+### Using [dein.vim](https://github.com/Shougo/dein.vim)
 
 ```viml
-NeoBundle 'nishigori/increment-activator'
+call dein#add('nishigori/increment-activator')
 ```
 
 If you hope to do other approach, Please read more [Documentation](doc/vim-increment-activator.txt)

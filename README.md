@@ -1,8 +1,7 @@
 # IncrementActivator.vim
 
 [![Build Status](http://img.shields.io/travis/nishigori/increment-activator/master.svg?style=flat)](https://travis-ci.org/nishigori/increment-activator)
-[![MIT Licensed](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](#license)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/nishigori/increment-activator/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![MIT Licensed](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/nishigori/increment-activator/master/MIT-LICENSE.txt)
 
 ![v:version >= 702](http://img.shields.io/badge/v:version->=%20702-007F00.svg?style=flat)
 ![Script Type: Utility](http://img.shields.io/badge/script%20type-utility-000000.svg?style=flat)
@@ -129,7 +128,3 @@ More than, Please read [Documentation](doc/vim-increment-activator.txt)
 ## Author
 
 * [Takuya Nishigori](http://github.com/nishigori)
-
-## LICENSE
-
-Licenced under the [MIT](http://opensource.org/licenses/MIT) License.

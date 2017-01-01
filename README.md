@@ -3,7 +3,8 @@
 [![Build Status](http://img.shields.io/travis/nishigori/increment-activator/master.svg?style=flat)](https://travis-ci.org/nishigori/increment-activator)
 [![MIT Licensed](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/nishigori/increment-activator/master/MIT-LICENSE.txt)
 
-![v:version >= 702](http://img.shields.io/badge/v:version->=%20702-007F00.svg?style=flat)
+![v:version >= 702](https://img.shields.io/badge/v:version->=%20702-007F00.svg?style=flat)
+![nvim --version >= 0.1.7](https://img.shields.io/badge/nvim%20----version->=%20NVIM%200.1.7-54a23d.svg?style=flat)
 ![Script Type: Utility](http://img.shields.io/badge/script%20type-utility-000000.svg?style=flat)
 
 The [Vim] powerful increment plugin
